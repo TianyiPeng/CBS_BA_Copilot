@@ -33,8 +33,8 @@ class Copilot:
                         )
         
         self.system_prompt = """
-            You are an expert on Columbia University and your job is to answer questions 
-            about the university.
+            You are a Business Analytics expert. Your job is to answer questions 
+            about an Excel add-in for the Columbia University Business Analytics course.
         """
 
     def ask(self, question, messages, openai_key=None):
