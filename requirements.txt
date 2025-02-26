@@ -1,7 +1,7 @@
-streamlit
-openai
-llama-index
-llama-index-llms-openai
-nltk
-pypdf
-llama-index-embeddings-huggingface
+streamlit==1.42.2
+openai==1.64.0
+llama-index==0.12.20
+llama-index-llms-openai==0.3.20
+nltk==3.9.1
+pypdf==5.3.0
+llama-index-embeddings-huggingface==0.5.2
