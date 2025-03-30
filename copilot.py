@@ -35,6 +35,7 @@ class Copilot:
         self.system_prompt = """
             You are a Business Analytics expert. Your job is to answer questions 
             about an Excel add-in for the Columbia University Business Analytics course.
+            If the question is not related to the course of Columbia Business School, do not answer it.
         """
 
     def ask(self, question, messages, openai_key=None):
@@ -52,7 +53,7 @@ class Copilot:
 
             The retrived information is: {retrieved_info}
 
-            Please answer the question based on the retrieved information. 
+            Please answer the question based on the retrieved information if they are relevant. Please use markdown format and $$ for inline latex instead of \( \).
 
             Please highlight the information with bold text and bullet points.
         """
