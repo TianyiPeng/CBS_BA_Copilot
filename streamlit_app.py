@@ -53,7 +53,7 @@ else:
 
             #print(retrived_info)
             if isinstance(answer, str):
-                st_markdown(answer)
+                st.write(answer)
             else:
                 ### write stream answer to UI
                 def generate():
@@ -61,7 +61,7 @@ else:
                         content = chunk.choices[0].delta.content
                         if content:
                             yield content
-                answer = st_streaming_markdown(generate, key="token_stream", theme_color="null")
-                #answer = st.write_stream(generate())
+                #answer = st_streaming_markdown(generate, key="token_stream", theme_color="null")
+                answer = st.write_stream(generate())
 
             st.session_state.messages.append({"role": "assistant", "content": answer})
