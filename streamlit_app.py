@@ -8,7 +8,7 @@ from streamlit_markdown import st_markdown
 ### set openai key, first check if it is in environment variable, if not, check if it is in streamlit secrets, if not, raise error
 
 
-st.title("Chat with Columbia Business Analytics Add-in Copilot")
+st.title("Chat with Columbia Business Analytics Add-in Copilot.")
 # st.write(
 #     "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
 # )
@@ -23,7 +23,7 @@ if not openai_api_key:
 else:
     if "messages" not in st.session_state.keys():  # Initialize the chat messages history
         st.session_state.messages = [
-            {"role": "assistant", "content": "I am Business Analytics Add-in Copilot, your personal assistant. You can ask me about Business Analytics Add-in."}
+            {"role": "assistant", "content": "I am Business Analytics Add-in Copilot, your personal assistant. You can ask me about Business Analytics Add-in. The Documentation for Add-in can be downloaded [here](https://cbs-ba-addin.com/#docs)."}
         ]
 
     @st.cache_resource
